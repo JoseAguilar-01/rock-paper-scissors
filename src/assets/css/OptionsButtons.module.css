@@ -1,0 +1,85 @@
+.container {
+	display: grid;
+	grid-template-areas: 'button-paper button-scissors' 'button-rock button-rock';
+	place-items: center;
+	place-content: center;
+	margin-inline: auto;
+	background-image: url('../images/bg-triangle.svg');
+	background-repeat: no-repeat;
+	background-size: 165px;
+	background-position: center;
+	width: -webkit-fill-available;
+	column-gap: 40px;
+	row-gap: 20px;
+}
+
+.container__button,
+.container__button--disabled {
+	all: unset;
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 15px;
+	background-color: #fff;
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	box-shadow:
+		rgba(0, 0, 0, 0.45) 0px 25px 20px -20px,
+		inset rgba(0, 0, 0, 0.5) 0px 25px 20px -25px;
+	transition: 0.2s ease-in-out 0s;
+}
+
+.container__button--paper {
+	grid-area: button-paper;
+	background-image: url('../images/icon-paper.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	border-color: #4865f4;
+}
+
+.container__button--scissors {
+	grid-area: button-scissors;
+	background-image: url('../images/icon-scissors.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	border-color: #ec9e0e;
+}
+
+.container__button--rock {
+	grid-area: button-rock;
+	background-image: url('../images/icon-rock.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	border-color: #dc2e4e;
+}
+
+@media (width >= 430px) {
+	.container {
+		background-size: 124px;
+	}
+
+	.container__button,
+	.container__button--disabled {
+		width: 120px;
+		height: 120px;
+	}
+}
+
+@media (width >= 768px) {
+	.container {
+		background-size: 206px;
+		column-gap: 50px;
+		row-gap: 25px;
+	}
+
+	.container__button,
+	.container__button--disabled {
+		width: 150px;
+		height: 150px;
+	}
+}
+
+.container__button:hover {
+	transform: scale(1.1);
+}
