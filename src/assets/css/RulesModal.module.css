@@ -8,16 +8,15 @@
 	justify-content: center;
 	align-items: center;
 	animation: fade-in ease 0.4s forwards;
+	z-index: 1;
 }
 
 .container--hidden {
-	inset: 0;
 	animation: fade-out ease 0.4s forwards;
 	pointer-events: none;
 }
 
 .container__modal {
-	width: 40%;
 	background-color: whitesmoke;
 	border-radius: 10px;
 	padding: 40px 30px;
@@ -51,11 +50,6 @@
 	justify-content: center;
 	align-items: center;
 	transition: all 0.2s ease;
-}
-
-.body__image {
-	width: 100%;
-	height: 100%;
 }
 
 .header__button:hover {

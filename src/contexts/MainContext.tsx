@@ -36,7 +36,7 @@ export const MainProvider: TMainProvider = ({ children }) => {
 		homeOption: '',
 	});
 	const [score, setScore] = useState(0);
-	const [showRules, setShowRules] = useState(false);
+	const [showRules, setShowRules] = useState(true);
 
 	const userWin = useMemo(() => {
 		const { userOption, homeOption } = selectedOptions;

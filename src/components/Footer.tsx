@@ -1,5 +1,4 @@
 import { useMainProvider } from 'src/hooks/useMainProvider';
-import { RulesModal } from './RulesModal';
 import styles from '@assets/css/Footer.module.css';
 
 export const Footer = () => {
@@ -7,7 +6,6 @@ export const Footer = () => {
 
 	return (
 		<>
-			<RulesModal />
 			<footer className={styles.container}>
 				<button
 					className={styles['container__button--rules']}
