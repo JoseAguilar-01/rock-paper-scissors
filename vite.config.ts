@@ -5,4 +5,5 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 // https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [react(), tsconfigPaths()],
+	base: 'https://joseaguilar-01.github.io/rock-paper-scissors',
 });

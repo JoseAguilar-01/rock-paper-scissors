@@ -10,7 +10,9 @@
 		"eslint:check": "pnpx eslint src/**",
 		"eslint:fix": "pnpx eslint src/** --fix",
 		"prettier:check": "pnpx prettier src/** --check",
-		"prettier:fix": "pnpx prettier src/** --write"
+		"prettier:fix": "pnpx prettier src/** --write",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d dist"
 	},
 	"dependencies": {
 		"react": "^18.2.0",
@@ -28,6 +30,7 @@
 		"eslint-plugin-prettier": "^5.1.3",
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"eslint-plugin-react-refresh": "^0.4.6",
+		"gh-pages": "^6.1.1",
 		"prettier": "3.2.5",
 		"typescript": "^5.2.2",
 		"vite": "^5.2.0"
