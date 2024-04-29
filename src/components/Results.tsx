@@ -7,7 +7,7 @@ import { ScissorsButton } from './OptionsButtons/ScissorsButton';
 import styles from '@assets/css/Results.module.css';
 
 export const Results = () => {
-	const { selectedOptions, userWin, resetSelectedOptions } = useMainProvider();
+	const { selectedOptions, userWin, isTie, resetSelectedOptions } = useMainProvider();
 
 	const { homeOption, userOption } = selectedOptions;
 
@@ -35,7 +35,7 @@ export const Results = () => {
 
 			<div className={styles.container__banner}>
 				<h2 className={styles.banner__title}>
-					{userWin ? 'YOU WIN' : 'YOU LOSE'}
+					{userWin ? 'YOU WIN' : isTie ? "IT'S A TIE" : 'YOU LOSE'}
 				</h2>
 				<button
 					className={styles.banner__button}
